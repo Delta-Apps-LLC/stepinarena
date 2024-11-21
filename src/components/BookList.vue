@@ -2,7 +2,7 @@
   <div class="component">
     <div class="booklist-wrapper">
       <button @click="decrement()" style="align-self: center;" :disabled="currentPage === 0">
-        <UIcon class="w-14 h-14" name="i-mdi-chevron-left"></UIcon>
+        <v-icon size="35">mdi-chevron-left</v-icon>
       </button>
 
       <!-- Column 1 -->
@@ -38,7 +38,7 @@
       </div>
       
       <button @click="increment()" style="align-self: center;" :disabled="currentPage >= maxPage">
-        <UIcon class="w-14 h-14" name="i-mdi-chevron-right"></UIcon>
+        <v-icon size="35">mdi-chevron-right</v-icon>
       </button>
     </div>
   </div>

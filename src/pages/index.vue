@@ -38,7 +38,7 @@
           <p class="featured-item-description main-text">{{ featuredChallenge.description }}</p>
           <p class="main-text" style="font-size: 14px; margin-bottom: 5px;">{{ featuredChallenge.date }}</p>
         </div>
-        <NuxtLink class="nuxt-link" style="margin-top: 5px;" to="/events">View All</NuxtLink>
+        <RouterLink class="router-link" style="margin-top: 5px;" to="/events">View All</RouterLink>
       </div>
 
       <div class="featured-item-wrapper">
@@ -46,17 +46,11 @@
         <div class="featured-item">
           <p class="featured-item-title item-title">{{ featuredEvent.title }}</p>
           <div class="featured-item-description main-text">
-            <button class="chevron-btn" @click="increment()">
-              <UIcon class="w-8 h-8" name="i-mdi-chevron-left"></UIcon>
-            </button>
-            <img class="event-img" :src="images[index]" />
-            <button class="chevron-btn" @click="decrement()">
-              <UIcon class="w-8 h-8" name="i-mdi-chevron-right"></UIcon>
-            </button>
+            <img class="event-img" src="../assets/images/dog-lake/DSC00537.jpg" />
           </div>
           <p class="main-text" style="font-size: 14px; margin-bottom: 5px;">{{ featuredChallenge.date }}</p>
         </div>
-        <NuxtLink class="nuxt-link" style="margin-top: 5px;" to="/events">View All</NuxtLink>
+        <RouterLink class="router-link" style="margin-top: 5px;" to="/events">View All</RouterLink>
       </div>
     </div>
 
@@ -68,8 +62,8 @@
         <p class="main-text" style="font-size: 14px; margin-bottom: 5px;">{{ featuredChallenge.date }}</p>
       </div>
       <div style="display: flex; flex-direction: row; justify-content: center; margin-top: 5px;">
-        <NuxtLink class="nuxt-link" to="/blog">Read Blog</NuxtLink>
-        <NuxtLink class="nuxt-link" to="/blog">View All</NuxtLink>
+        <RouterLink class="router-link" to="/blog">Read Blog</RouterLink>
+        <RouterLink class="router-link" to="/blog">View All</RouterLink>
       </div>
     </div>
   </div>
@@ -86,51 +80,32 @@ onMounted(() => {
   window.addEventListener('resize', () => {
     windowWidth.value = window.innerWidth
   })
-  // images.value = Object.values(
-  //   import.meta.glob('../assets/images/dog-lake/*.jpg', {
-  //     eager: true,
-  //     import: 'default'
-  //   })
-  // )
-  images.value = []
 })
 
-let images = ref([])
-let index = ref(0)
 let windowWidth = ref(0)
 
 const introduction = ref('The Arena was founded with the average man in mind and in it you will find other average men who have chosen to live their lives in an extraordinary way. In a day and age where success equals money, happiness means pleasure, and life is increasingly lived online, members of The Arena have chosen to fight back.<br>They have chosen to band together in solidarity to become men of values and principles, which they compromise for nothing; they have voluntarily elected to throw off the ignoble ease of modernity in favor of the personal growth found just beyond the circle of comfort; they have decided to be doers of deeds rather than critics and prioritize action over abstraction; they are autonomous masters of skill; they are strong protectors and providers for those around them; they are active, enthusiastic participants in life; they are men of community and service; they are not only good men, they are good at being men.<br>It is our firm belief that if more of the common, average men of today embraced such a doctrine of action, strength, and virtue then our nation and our world would be a much better place. If you wish to be such a man then just step up and step in. Welcome to THE ARENA.')
 const introSmallScreen = ref('The Arena was founded with the average man in mind and in it you will find other average men who have chosen to live their lives in an extraordinary way. In a day and age where success equals money, happiness means pleasure, and life is increasingly lived online, members of The Arena have chosen to fight back.<br><br>They have chosen to band together in solidarity to become men of values and principles, which they compromise for nothing; they have voluntarily elected to throw off the ignoble ease of modernity in favor of the personal growth found just beyond the circle of comfort; they have decided to be doers of deeds rather than critics and prioritize action over abstraction; they are autonomous masters of skill; they are strong protectors and providers for those around them; they are active, enthusiastic participants in life; they are men of community and service; they are not only good men, they are good at being men.<br><br>It is our firm belief that if more of the common, average men of today embraced such a doctrine of action, strength, and virtue then our nation and our world would be a much better place. If you wish to be such a man then just step up and step in. Welcome to THE ARENA.')
 const teddyQuote = ref('"It is not the critic who counts; not the man who points out how the strong man stumbles, or where the doer of deeds could have done them better. The credit belongs to the man who is actually in the arena, whose face is marred by dust and sweat and blood; who strives valiantly; who errs, who comes short again and again, because there is no effort without error and shortcoming; but who does actually strive to do the deeds; who knows great enthusiasms, the great devotions; who spends himself in a worthy cause; who at the best knows in the end the triumph of high achievement, and who at the worst, if he fails, at least fails while daring greatly, so that his place shall never be with those cold and timid souls who neither know victory nor defeat."')
 
-const featuredChallenge = {
+const featuredChallenge = ref({
   title: 'New Skill/Read 30 Minutes',
   description: 'Spend time learning a new hard skill, and spend at least 30 minutes per day reading content that improves your mind or your life in a meaningful way.',
   date: '2024-11-16'
-}
+})
 
-const featuredBlog = {
+const featuredBlog = ref({
   title: 'Some sort of blog title',
   description: 'This is a preview text of the blog that will be featured. There will be a cutoff of a certain number of characters, and then they can click to read the whole blog.',
   date: '2024-10-5'
-}
+})
 
-const featuredEvent = {
+const featuredEvent = ref({
   title: 'Dog Lake Hike',
-  images: [],
+  image: "../assets/images/dog-lake/DSC00537.jpg",
   // description: 'The men got together and hiked up to Dog Lake in Big Cottonwood Canyon.',
   date: '2024-10-12'
-}
-
-function increment() {
-  if (index.value == images.value.length - 1) index.value = 0
-  else index.value++
-}
-
-function decrement() {
-  if (index.value == 0) index.value = images.value.length - 1
-  else index.value--
-}
+})
 
 </script>
 

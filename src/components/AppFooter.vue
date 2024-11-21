@@ -1,10 +1,12 @@
 <template>
-  <v-footer height="40" app>
-    <span>&copy; {{ new Date().getFullYear() }} &ensp;|&ensp; The Arena &ensp;|</span>
-
-    <RouterLink to="/contact" style="margin: 0 10px;">
-      Join Our Newsletter
-    </RouterLink>
+  <v-footer height="40" app style="background-color: transparent;">
+    <div style="background-color: #B8B8B899; padding: 7px 10px; border-radius: 10px;">
+      <span>&copy; {{ new Date().getFullYear() }} &ensp;|&ensp; The Arena &ensp;|</span>
+      
+      <RouterLink to="/contact" style="margin: 0 10px;">
+        Join Our Newsletter
+      </RouterLink>
+    </div>
   </v-footer>
 </template>
 

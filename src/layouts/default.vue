@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app id="app">
     <v-app-bar id="app-bar">
       <v-app-bar-title>
         <RouterLink to="/">
@@ -70,7 +70,7 @@ const navBtns = [
 @import '@/styles/style.css';
 
 #app-bar {
-  position: fixed;
+  position: fixed !important;
   padding: 6px;
   display: flex;
   flex-direction: row;
