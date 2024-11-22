@@ -19,19 +19,36 @@
     <div class="arena-row">
       <img id="arena-img"
         src="../assets/images/arena.jpg"
+        data-aos="fade-up-right"
+        data-aos-duration="1200"
+        data-aos-delay="250"
       />
-      <p class="main-text text-block" v-html="windowWidth <= 1000 ? introSmallScreen : introduction"></p>
+      <p class="main-text text-block"
+        v-html="windowWidth <= 1000 ? introSmallScreen : introduction"
+        data-aos="fade-up-left"
+        data-aos-duration="1200"
+        data-aos-delay="250"
+      ></p>
     </div>
 
     <div style="margin-top: 30px;"></div>
     
-    <p class="page-header header-font">Inspired by Theodore Roosevelt</p>
-    <p class="main-text text-block"><em>{{ teddyQuote }}</em></p>
+    <p class="page-header header-font"
+      data-aos="fade-up"
+      data-aos-duration="1200"
+    >Inspired by Theodore Roosevelt</p>
+    <p class="main-text text-block"
+      data-aos="fade-up"
+      data-aos-duration="1200"
+    ><em>{{ teddyQuote }}</em></p>
 
     <div style="margin-top: 30px;"></div>
     
     <div class="featured-row">
-      <div class="featured-item-wrapper">
+      <div class="featured-item-wrapper"
+        data-aos="fade-up-right"
+        data-aos-duration="1200"
+      >
         <p class="page-header header-font">Recent Challenge</p>
         <div class="featured-item">
           <p class="featured-item-title item-title">{{ featuredChallenge.title }}</p>
@@ -41,7 +58,10 @@
         <RouterLink class="router-link" style="margin-top: 5px;" to="/events">View All</RouterLink>
       </div>
 
-      <div class="featured-item-wrapper">
+      <div class="featured-item-wrapper"
+        data-aos="fade-up-left"
+        data-aos-duration="1200"
+      >
         <p class="page-header header-font">Recent Event</p>
         <div class="featured-item">
           <p class="featured-item-title item-title">{{ featuredEvent.title }}</p>
@@ -54,7 +74,10 @@
       </div>
     </div>
 
-    <div class="featured-item-wrapper">
+    <div class="featured-item-wrapper"
+      data-aos="fade-up"
+      data-aos-duration="1200"
+    >
       <p class="page-header header-font">Recent Blog</p>
       <div class="featured-item">
         <p class="featured-item-title item-title">{{ featuredBlog.title }}</p>
@@ -226,12 +249,13 @@ const featuredEvent = ref({
 }
 
 .featured-item {
-  background-color: #B8B8B8;
   display: flex;
   height: auto;
   flex-direction: column;
   align-items: center;
   border-radius: 6px;
+  border: solid 1px #2F5D3F;
+  box-shadow: #2F5D3F 4px 4px;
 }
 
 .featured-item-title {

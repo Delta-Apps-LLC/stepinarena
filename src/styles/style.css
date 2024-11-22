@@ -80,6 +80,12 @@
     background-color: #B8B8B844;
 }
 
+.text-block {
+    border: solid 1.5px #2F5D3F;
+    border-radius: 6px;
+    box-shadow: #2F5D3F 4px 4px;
+}
+
 /* Small - Mobile */
 @media (max-width: 750px) {
     .text-block {

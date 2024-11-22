@@ -1,17 +1,34 @@
 <template>
   <div class="page">
-    <p class="page-header header-font">Mission Statement</p>
-    <p class="main-text text-block">{{ mission }}</p>
+    <p class="page-header header-font"
+      data-aos="zoom-in"
+      data-aos-duration="1200"
+    >Mission Statement</p>
+    <p class="main-text text-block"
+      data-aos="fade-up"
+      data-aos-duration="1200"
+      data-aos-delay="100"
+    >{{ mission }}</p>
     
-    <div style="margin-top: 30px;"></div>
+    <div style="margin-top: 40px;"></div>
 
-    <p class="page-header header-font">Core Virtues</p>
+    <p class="page-header header-font"
+      data-aos="fade-up"
+      data-aos-duration="1200"
+    >Core Virtues</p>
+
     <div class="virtue-wrapper">
-      <div class="virtue-row" v-for="(virtue, i) in virtues" :key="i">
+      <div class="virtue-row"
+        :class="i != virtues.length - 1 ? 'virtue-border' : ''"
+        v-for="(virtue, i) in virtues"
+        :key="i"
+        data-aos="fade-up"
+        data-aos-duration="1200"
+      >
         <div class="circle">
           <p class="header-font" id="virtue-title">{{ virtue.title }}</p>
           <v-icon id="virtue-icon"
-            :size="windowWidth <= 1300  ? '35' : windowWidth <= 1700 ? '40' : '45'"
+          :size="windowWidth <= 1300  ? '35' : windowWidth <= 1700 ? '40' : '45'"
           >{{ virtue.icon }}</v-icon>
         </div>
         <p class="virtue-details main-text">{{ virtue.details }}</p>
@@ -22,8 +39,11 @@
 
 <script lang="ts" setup>
 import { onMounted, ref } from 'vue';
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 onMounted(() => {
+  AOS.init()
   windowWidth.value = window.innerWidth
   window.addEventListener('resize', () => {
     windowWidth.value = window.innerWidth
@@ -77,6 +97,14 @@ const virtues = ref([
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.virtue-row {
+  padding: 30px 0 !important;
+}
+
+.virtue-border {
+  border-bottom: solid 1px #2F5D3F;
 }
 
 .circle {

@@ -11,6 +11,9 @@
           @click="openBookLink(book.url)"
           v-for="(book, index) in displayedBooks.slice(0, 3)"
           :key="index"
+          data-aos="fade-up"
+          data-aos-duration="1200"
+          data-aos-delay="150"
         >
           <img :src="book.image" alt="Book cover" class="book-image" />
           <div class="book-info">
@@ -27,6 +30,9 @@
           @click="openBookLink(book.url)"
           v-for="(book, index) in displayedBooks.slice(3, 6)"
           :key="index"
+          data-aos="fade-up"
+          data-aos-duration="1200"
+          data-aos-delay="150"
         >
           <img :src="book.image" alt="Book cover" class="book-image" />
           <div class="book-info">
@@ -46,8 +52,11 @@
 
 <script lang="ts" setup>
 import { ref, computed, onMounted } from 'vue'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 onMounted(() => {
+  AOS.init()
   windowWidth.value = window.innerWidth
   window.addEventListener('resize', () => {
     windowWidth.value = window.innerWidth
