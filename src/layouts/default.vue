@@ -1,9 +1,9 @@
 <template>
   <v-app id="app">
-    <v-app-bar id="app-bar">
+    <v-app-bar id="app-bar" flat>
       <v-app-bar-title>
         <RouterLink to="/">
-          <img id="logo-btn" src="@/assets/images/title-logo-no-bg.png" />
+          <img id="logo-btn" src="@/assets/images/img-logo-no-bg.png" />
         </RouterLink>
       </v-app-bar-title>
       <v-spacer />
@@ -74,14 +74,14 @@ const navBtns = [
   padding: 6px;
   display: flex;
   flex-direction: row;
-  background-color: #D4C5B4;
+  background-color: #F3F7F5;
   justify-content: space-between;
   align-items: center;
   z-index: 9999;
 }
 
 #logo-btn {
-  height: 50px;
+  height: 60px;
 }
 
 </style>

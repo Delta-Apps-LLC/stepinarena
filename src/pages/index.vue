@@ -1,49 +1,49 @@
 <template>
   <div class="page">
-    <p class="big-header header-font"
+    <div style="margin-top: 30px;"></div>
+    <img height="120px"
+      src="@/assets/images/title-logo-no-bg.png"
       data-aos="zoom-in"
       data-aos-duration="1200"
-    >
-      <span>Welcome to... </span>
-      <span>The Arena!</span>
-    </p>
-    <p class="header-font"
-      id="motto"
-      data-aos="fade-up"
-      data-aos-duration="1200"
-      data-aos-delay="100"
-    >
-      <em>"Step Up, Step In"</em>
-    </p>
+    />
 
-    <div class="arena-row">
-      <img id="arena-img"
-        src="../assets/images/arena.jpg"
-        data-aos="fade-up-right"
+    <div style="margin-top: 60px;"></div>
+
+    <div class="teddy-wrapper">
+      <div class="teddy-img-row">
+        <img src="@/assets/images/roosevelt.jpg"
+          id="roosevelt-img"
+          data-aos="fade-up-right"
+          data-aos-duration="1200"
+        />
+        <p id="teddy-quote"
+          data-aos="fade-up-left"
+          data-aos-duration="1200"
+        >
+          {{ teddyQuote }}
+        </p>
+      </div>
+      <p id="teddy-name"
+        data-aos="fade-up"
         data-aos-duration="1200"
-        data-aos-delay="250"
-      />
-      <p class="main-text text-block"
-        v-html="windowWidth <= 1000 ? introSmallScreen : introduction"
-        data-aos="fade-up-left"
-        data-aos-duration="1200"
-        data-aos-delay="250"
-      ></p>
+      >&ndash; Theodore Roosevelt</p>
     </div>
 
-    <div style="margin-top: 30px;"></div>
-    
-    <p class="page-header header-font"
+    <div style="margin-top: 40px;"></div>
+
+    <p class="giant-header"
       data-aos="fade-up"
       data-aos-duration="1200"
-    >Inspired by Theodore Roosevelt</p>
-    <p class="main-text text-block"
-      data-aos="fade-up"
-      data-aos-duration="1200"
-    ><em>{{ teddyQuote }}</em></p>
+    >Step Up. Step In.</p>
 
     <div style="margin-top: 30px;"></div>
+
+    <hr id="divider" />
     
+    <p class="main-text" id="introduction" v-html="introduction"></p>
+    
+    <hr id="divider" />
+
     <div class="featured-row">
       <div class="featured-item-wrapper"
         data-aos="fade-up-right"
@@ -107,8 +107,7 @@ onMounted(() => {
 
 let windowWidth = ref(0)
 
-const introduction = ref('The Arena was founded with the average man in mind and in it you will find other average men who have chosen to live their lives in an extraordinary way. In a day and age where success equals money, happiness means pleasure, and life is increasingly lived online, members of The Arena have chosen to fight back.<br>They have chosen to band together in solidarity to become men of values and principles, which they compromise for nothing; they have voluntarily elected to throw off the ignoble ease of modernity in favor of the personal growth found just beyond the circle of comfort; they have decided to be doers of deeds rather than critics and prioritize action over abstraction; they are autonomous masters of skill; they are strong protectors and providers for those around them; they are active, enthusiastic participants in life; they are men of community and service; they are not only good men, they are good at being men.<br>It is our firm belief that if more of the common, average men of today embraced such a doctrine of action, strength, and virtue then our nation and our world would be a much better place. If you wish to be such a man then just step up and step in. Welcome to THE ARENA.')
-const introSmallScreen = ref('The Arena was founded with the average man in mind and in it you will find other average men who have chosen to live their lives in an extraordinary way. In a day and age where success equals money, happiness means pleasure, and life is increasingly lived online, members of The Arena have chosen to fight back.<br><br>They have chosen to band together in solidarity to become men of values and principles, which they compromise for nothing; they have voluntarily elected to throw off the ignoble ease of modernity in favor of the personal growth found just beyond the circle of comfort; they have decided to be doers of deeds rather than critics and prioritize action over abstraction; they are autonomous masters of skill; they are strong protectors and providers for those around them; they are active, enthusiastic participants in life; they are men of community and service; they are not only good men, they are good at being men.<br><br>It is our firm belief that if more of the common, average men of today embraced such a doctrine of action, strength, and virtue then our nation and our world would be a much better place. If you wish to be such a man then just step up and step in. Welcome to THE ARENA.')
+const introduction = ref('We encourage all men to rise above a life of passivity and ignoble ease as a critic in the spectator stands of life and instead to embrace the grittiness of honorable action within the arena of their own lives.<br><br>We desire to forge ourselves and each other not only into good men of virtue and morals but into men who are good at being men as well.<br><br>Through regular, in-person meetups and monthly challenges we push each other to become husbands, fathers, brothers, sons, friends and citizens of the highest quality.')
 const teddyQuote = ref('"It is not the critic who counts; not the man who points out how the strong man stumbles, or where the doer of deeds could have done them better. The credit belongs to the man who is actually in the arena, whose face is marred by dust and sweat and blood; who strives valiantly; who errs, who comes short again and again, because there is no effort without error and shortcoming; but who does actually strive to do the deeds; who knows great enthusiasms, the great devotions; who spends himself in a worthy cause; who at the best knows in the end the triumph of high achievement, and who at the worst, if he fails, at least fails while daring greatly, so that his place shall never be with those cold and timid souls who neither know victory nor defeat."')
 
 const featuredChallenge = ref({
@@ -202,6 +201,74 @@ const featuredEvent = ref({
   #arena-img {
     width: 300px;
   }
+}
+
+@media (max-width: 450px) {
+  .teddy-wrapper {
+    width: 90%;
+  }
+
+  #introduction {
+    width: 90%;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  #divider {
+    width: 95%;
+  }
+}
+
+@media (min-width: 451px) {
+  .teddy-wrapper {
+    width: 60%;
+  }
+
+  #introduction {
+    width: 60%;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  #divider {
+    width: 65%;
+  }
+}
+
+#divider {
+  height: 2px;
+  color: #2D2825;
+  background: #2D2825;
+  margin: 30px;
+}
+
+.teddy-wrapper {
+  margin: 20px;
+}
+
+.teddy-img-row {
+  display: block;
+}
+
+#teddy-quote, #teddy-name {
+  color: #2D2825;
+  font-family: 'SpecialElite';
+  font-size: 17px;
+}
+
+#teddy-name {
+  float: right;
+  color: #2F5D3F !important;
+  font-weight: bold;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+#roosevelt-img {
+  float: left;
+  height: 150px;
+  border: solid 5px #2F5D3F;
+  margin: 0 15px 0 0;
 }
 
 .arena-row {

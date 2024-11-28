@@ -1,7 +1,22 @@
+@font-face {
+    font-family: 'AbrilFatFace';
+    src: url('../../public/fonts/Abril_Fatface/AbrilFatface-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'CrimsonText';
+    src: url('../../public/fonts/Crimson_Text/CrimsonText-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SpecialElite';
+    src: url('../../public/fonts/Special_Elite/SpecialElite-Regular.ttf') format('truetype');
+}
+
 #app {
-    background-image: url('@/assets/images/background.jpg');
+    /* background-image: url('@/assets/images/background.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: center; */
     background-color: #F3F7F5;
 }
 
@@ -23,6 +38,13 @@
     color: #2F5D3F;
 }
 
+.giant-header {
+    font-family: 'AbrilFatface';
+    font-size: 60px;
+    color: #2F5D3F;
+    text-align: center;
+}
+
 .big-header {
     font-size: 34px;
     padding: 10px;
@@ -35,12 +57,13 @@
 }
 
 .header-font {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+    font-family: 'CrimsonText';
     letter-spacing: 1.5px;
 }
 
 .main-text {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'CrimsonText';
     font-size: 18px;
     color: #2D2825;
 }
@@ -67,7 +90,8 @@
     text-decoration: none;
     padding: 6px 20px;
     color: #2D2825;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+    font-family: 'SpecialElite';
     font-size: 18px;
     border-radius: 8px;
 }
