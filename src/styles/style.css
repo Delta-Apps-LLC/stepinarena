@@ -47,8 +47,7 @@
 
 .big-header {
     font-size: 34px;
-    padding: 10px;
-    color: #2F5D3F;
+    color: #2D2825;
 }
 
 .small-header {
@@ -58,8 +57,14 @@
 
 .header-font {
     /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
-    font-family: 'CrimsonText';
+    font-family: 'AbrilFatface';
     letter-spacing: 1.5px;
+}
+
+.large-text {
+    font-family: 'CrimsonText';
+    font-size: 22px;
+    color: #2D2825;
 }
 
 .main-text {
@@ -69,15 +74,25 @@
 }
 
 .medium-text {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'CrimsonText';
     font-size: 16px;
     color: #2D2825;
 }
 
 .small-text {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'CrimsonText';
     font-size: 14px;
     color: #2D2825;
+}
+
+.submit-btn {
+    font-family: 'CrimsonText';
+    font-size: 16px;
+    color: #2D2825;
+    background-color: #2F5D3F22;
+    border-radius: 10px;
+    border: solid 1.5px #2F5D3F;
+    box-shadow: #2D282599 3px 3px;
 }
 
 .item-title {

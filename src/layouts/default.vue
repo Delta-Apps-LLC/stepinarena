@@ -56,11 +56,11 @@ onMounted(() => {
 });
 
 const navBtns = [
-  { title: 'About', to: '/about' },
+  { title: 'Home', to: '/' },
+  { title: 'Articles', to: '/articles' },
   { title: 'Events', to: '/events' },
   { title: 'Resources', to: '/resources' },
   { title: 'Store', to: '/store' },
-  { title: 'Blog', to: '/blog' },
   { title: 'Contact', to: '/contact' },
 ];
 
