@@ -1,6 +1,7 @@
 <template>
   <div class="page">
     <p class="big-header header-font"
+      style="color: #2F5D3F;"
       data-aos="zoom-in"
       data-aos-duration="1200"
     >
@@ -22,11 +23,11 @@
     </p>
     <BookList />
   
-    <div style="margin-top: 40px;"></div>
+    <!-- <div style="margin-top: 40px;"></div>
     <hr style="height: 2px; width: 90%;" />
-    <div style="margin-top: 40px;"></div>
+    <div style="margin-top: 40px;"></div> -->
 
-    <div class="resource-wrapper">
+    <!-- <div class="resource-wrapper">
       <div class="resource-col">
         <p class="page-header header-font"
           data-aos="fade-up"
@@ -46,7 +47,7 @@
         </p>
         <ResourceList :resources="otherResources" />
       </div>
-    </div>
+    </div> -->
 
     <div style="margin-top: 40px;"></div>
 
@@ -68,7 +69,7 @@ onMounted(() => {
 
 let windowWidth = ref(0)
 
-const resourceIntro = ref('We live in a world of mind-numbing technology and entertainment. Surrounding ourselves with positive and enlightening content helps us accomplish the mission of The Arena to improve our lives in meaningful ways. Please explore the books, podcasts, and other resources we have to offer!')
+const resourceIntro = ref('We live in a world of mind-numbing technology and entertainment. Surrounding ourselves with positive and enlightening content helps us accomplish the mission of The Arena to improve our lives in meaningful ways. Please explore the various books we have suggested!')
 const podcasts = ref([
   {
     title: "Man Enough",

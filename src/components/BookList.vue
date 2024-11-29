@@ -165,20 +165,20 @@ const books = ref([
     blurb: "An acclaimed biography offering an in-depth look at the life, leadership, and legacy of George Washington.",
     image: "books/washington-life.jpg"
   },
-  {
-    title: "Raising Cain",
-    author: "Dan Kindlon, Michael Thompson",
-    url: "https://a.co/d/5wTbvo1",
-    blurb: "Insights into boys' emotional development, helping them build resilience and express themselves authentically in a complex world",
-    image: "books/raising-cain.jpg"
-  },
-  {
-    title: "The Ruthless Elimination of Hurry",
-    author: "John Mark Comer",
-    url: "https://a.co/d/ddhkEpd",
-    blurb: "Explores the dangers of a hurried lifestyle, offering practical wisdom and spiritual insights to embrace a slower, more meaningful way of living",
-    image: "books/ruthless-elimination.jpg"
-  },
+  // {
+  //   title: "Raising Cain",
+  //   author: "Dan Kindlon, Michael Thompson",
+  //   url: "https://a.co/d/5wTbvo1",
+  //   blurb: "Insights into boys' emotional development, helping them build resilience and express themselves authentically in a complex world",
+  //   image: "books/raising-cain.jpg"
+  // },
+  // {
+  //   title: "The Ruthless Elimination of Hurry",
+  //   author: "John Mark Comer",
+  //   url: "https://a.co/d/ddhkEpd",
+  //   blurb: "Explores the dangers of a hurried lifestyle, offering practical wisdom and spiritual insights to embrace a slower, more meaningful way of living",
+  //   image: "books/ruthless-elimination.jpg"
+  // },
 ]);
 
 const booksPerPage = computed(() => (windowWidth.value < 850 ? 3 : 6))
