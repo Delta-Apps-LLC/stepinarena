@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <p class="big-header header-font"
-      style="color: #2F5D3F;"
+      style="color: #2F5D3F; text-align: center;"
       data-aos="zoom-in"
       data-aos-duration="1200"
     >
