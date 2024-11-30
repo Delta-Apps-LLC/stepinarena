@@ -223,6 +223,7 @@ function openBookLink(url: string) {
 
 @media (max-width: 450px) {
   .book-row {
+    text-align: center;
     flex-direction: column;
   }
 }
