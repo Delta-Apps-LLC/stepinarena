@@ -6,7 +6,6 @@
           <img id="logo-btn" src="@/assets/images/img-logo-no-bg.png" />
         </RouterLink>
       </v-app-bar-title>
-      <v-spacer />
 
       <div v-if="windowWidth > 800">
         <RouterLink class="router-link"
@@ -70,6 +69,7 @@ const navBtns = [
 @import '@/styles/style.css';
 
 #app-bar {
+  width: 100vw !important;
   position: fixed !important;
   padding: 6px;
   display: flex;

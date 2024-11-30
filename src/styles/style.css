@@ -14,9 +14,6 @@
 }
 
 #app {
-    /* background-image: url('@/assets/images/background.jpg');
-    background-size: cover;
-    background-position: center; */
     background-color: #F3F7F5;
 }
 
@@ -105,7 +102,6 @@
     text-decoration: none;
     padding: 6px 20px;
     color: #2D2825;
-    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
     font-family: 'SpecialElite';
     font-size: 18px;
     border-radius: 8px;

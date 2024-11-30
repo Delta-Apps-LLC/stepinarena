@@ -6,36 +6,26 @@
                     data-aos="fade-up"
                     data-aos-duration="1200"
                 >Core Virtues</p>
-                <sl-carousel class="vertical"
-                    v-if="windowWidth < 1000"
-                    pagination
-                    :slides-per-page="windowWidth < 650 ? '2' : windowWidth <= 1000 ? '3' : '4'"
-                    slides-per-move="1"
-                    orientation="vertical"
-                >
-                    <sl-carousel-item
+                <div class="virtue-wrapper" v-if="windowWidth < 1000">
+                    <div class="virtue-row"
                         v-for="(virtue, i) in virtues"
                         :key="i"
                     >
-                        <div class="virtue-wrapper">
-                            <div class="virtue-row">
-                                <div class="circle"
-                                    data-aos="fade-right"
-                                    data-aos-duration="1200"
-                                >
-                                    <p class="header-font" id="virtue-title">{{ virtue.title }}</p>
-                                    <v-icon id="virtue-icon"
-                                        :size="windowWidth < 750 ? '30' : windowWidth <= 1300  ? '35' : windowWidth <= 1700 ? '40' : '45'"
-                                    >{{ virtue.icon }}</v-icon>
-                                </div>
-                                <p class="virtue-details"
-                                    data-aos="fade-left"
-                                    data-aos-duration="1200"
-                                >{{ virtue.details }}</p>
-                            </div>
+                        <div class="circle"
+                            data-aos="fade-right"
+                            data-aos-duration="1200"
+                        >
+                            <p class="header-font" id="virtue-title">{{ virtue.title }}</p>
+                            <v-icon id="virtue-icon"
+                                :size="windowWidth < 750 ? '30' : windowWidth <= 1300  ? '35' : windowWidth <= 1700 ? '40' : '45'"
+                            >{{ virtue.icon }}</v-icon>
                         </div>
-                    </sl-carousel-item>
-                </sl-carousel>
+                        <p class="virtue-details"
+                            data-aos="fade-left"
+                            data-aos-duration="1200"
+                        >{{ virtue.details }}</p>
+                    </div>
+                </div>
 
                 <div class="virtue-wrapper"
                     v-if="windowWidth > 1000"
